@@ -5,6 +5,7 @@ import adidas from "../../images/adidas.svg";
 import heart from "../../images/heart.svg";
 import shopping from "../../images/shopping.svg";
 import user from "../../images/user.svg";
+import CartComponent from "./CartComponent";
 function Header() {
   return (
     <div className="header">
@@ -16,8 +17,7 @@ function Header() {
         <img src={adidas} alt="" />
         <ul className="icons">
           <li>
-            <img src={shopping} alt="" />
-            <span>Cart</span>
+            <CartComponent />
           </li>
           <li>
             <img src={heart} alt="" />
@@ -31,20 +31,20 @@ function Header() {
       </div>
       <div className="navbar">
         <div className="container">
-            <ul>
-                <li>Men</li>
-                <li>Women</li>
-                <li>Unisex</li>
-                <li>Kids</li>
-                <li>Best Sellers</li>
-                <li>New Arrivals</li>
-                <li>Offers</li>
-            </ul>
+          <ul>
+            <li>Men</li>
+            <li>Women</li>
+            <li>Unisex</li>
+            <li>Kids</li>
+            <li>Best Sellers</li>
+            <li>New Arrivals</li>
+            <li>Offers</li>
+          </ul>
         </div>
       </div>
       <div className="path">
         <div className="container">
-            Men / Clothing / Tops / Adidas / Adidas Black T-Shirt
+          Men / Clothing / Tops / Adidas / Adidas Black T-Shirt
         </div>
       </div>
     </div>

@@ -92,7 +92,7 @@
   margin: 0 10px;
   cursor: pointer;
 }
-.icons li:first-child::before {
+.badge {
   content: "0";
   background-color: var(--primary-color);
   position: absolute;
