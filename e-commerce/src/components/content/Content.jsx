@@ -10,6 +10,7 @@ import plus from "../../images/plus.svg";
 import minus from "../../images/minus.svg";
 import leftArrow from "../../images/leftArrow.svg";
 import rightArrow from "../../images/rightArrow.svg";
+import Card from "./Card";
 
 function Content() {
   const [counter, setCounter] = useState(1);
@@ -112,6 +113,18 @@ function Content() {
           </div>
         </div>
         {/* )} */}
+      </div>
+      <div className="products">
+        <div className="container">
+        <h2 style={{fontSize:"28px",color:"#542e90",fontWeight:"bold"}}>Similar Products</h2>
+          <p style={{fontSize:"22px",fontWeight:"300",color:"#575756",margin:"5px 0 40px"}}>You may like these products also</p>
+          <div className="cards-container">
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+          </div>
+        </div>
       </div>
     </div>
   );
