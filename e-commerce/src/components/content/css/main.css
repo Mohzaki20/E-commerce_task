@@ -205,7 +205,7 @@
 
 .card {
   width: 268px;
-  height: 440px;
+  min-height: 440px;
   border: .75px solid #ECECEC;
   padding: 5px;
   border-radius: 5px;
@@ -213,6 +213,8 @@
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  height: auto;
+  margin: 0 0 20px;
 }
 
 .card .card-price {
@@ -235,4 +237,23 @@
   display: block!important;
   flex-direction: column;
   justify-content: flex-start;
+}
+.details-btn {
+  margin: 15px auto;
+  width: 90%;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  padding: 10px 20px;
+  color: white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.product {
 }

@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Adidas",
+        "imgUrl": "../../images/youth.png"
+    },
+    {
+        "id": 2,
+        "name": "Nike",
+        "imgUrl": "../../public/images/phone.svg"
+    },
+    {
+        "id": 3,
+        "name": "H&M",
+        "imgUrl": "../../src/images/adidas.svg"
+    },
+    {
+        "id": 4,
+        "name": "Active",
+        "imgUrl": "../../src/images/adidas.svg"
+    },
+    {
+        "id": 5,
+        "name": "Cora",
+        "imgUrl": "../../src/images/adidas.svg"
+    },
+    {
+        "id": 6,
+        "name": "Town Team",
+        "imgUrl": "../../src/images/adidas.svg"
+    }
+]

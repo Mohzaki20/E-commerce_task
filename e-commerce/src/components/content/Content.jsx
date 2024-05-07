@@ -11,9 +11,24 @@ import minus from "../../images/minus.svg";
 import leftArrow from "../../images/leftArrow.svg";
 import rightArrow from "../../images/rightArrow.svg";
 import Card from "./Card";
+import { useShoppingCart } from "../../context/ShoppingCartContext";
+import { useParams } from "react-router-dom";
 
-function Content() {
-  const [counter, setCounter] = useState(1);
+function Content(props) {
+  const {
+    cartItems,
+    getStoreQuantity,
+    increaseCartQuantity,
+    decreaseCartQuantity,
+    removeItemsFromCart,
+  } = useShoppingCart();
+
+  const { id } = useParams();
+  console.log(cartItems);
+  // const increase = () => {
+  //   increaseCartQuantity(id)
+  //   setCounter(counter + 1)
+  // }
   return (
     <div className="content">
       <div className="container">
@@ -98,17 +113,25 @@ function Content() {
           <div className="quantity">
             <h3>Quantity</h3>
             <div className="counter">
-              <button className="minus" onClick={() => counter === 1 ? null : setCounter(counter - 1)}>
+              <button
+                className="minus"
+                onClick={() =>  decreaseCartQuantity(id)}
+              >
                 <img src={minus} alt="" width={12} />
               </button>
-              <div className="num">{counter}</div>
-              <button className="plus" onClick={() => setCounter(counter + 1)}>
+              <div className="num">{getStoreQuantity(id)}</div>
+              <button className="plus" onClick={() => increaseCartQuantity(id)}>
                 <img src={plus} alt="" width={12} />
               </button>
             </div>
             <div className="buttons">
-              <button className="addtoCart" >Add To Cart</button>
-              <button className="pickup">Pickup From Store</button>
+              <button
+                className="addtoCart"
+                onClick={() => increaseCartQuantity(id)}
+              >
+                Add To Cart
+              </button>
+              <button className="pickup" onClick={() => removeItemsFromCart(id)}>Remove From Store</button>
             </div>
           </div>
         </div>
@@ -116,13 +139,26 @@ function Content() {
       </div>
       <div className="products">
         <div className="container">
-        <h2 style={{fontSize:"28px",color:"#542e90",fontWeight:"bold"}}>Similar Products</h2>
-          <p style={{fontSize:"22px",fontWeight:"300",color:"#575756",margin:"5px 0 40px"}}>You may like these products also</p>
+          <h2
+            style={{ fontSize: "28px", color: "#542e90", fontWeight: "bold" }}
+          >
+            Similar Products
+          </h2>
+          <p
+            style={{
+              fontSize: "22px",
+              fontWeight: "300",
+              color: "#575756",
+              margin: "5px 0 40px",
+            }}
+          >
+            You may like these products also
+          </p>
           <div className="cards-container">
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
           </div>
         </div>
       </div>

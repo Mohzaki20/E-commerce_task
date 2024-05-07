@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import shopping from "../../images/shopping.svg";
-import "./css/main.css"
+import StoreContext from "../../App";
+import "./css/main.css";
+import { useShoppingCart } from "../../context/ShoppingCartContext";
+
 function CartComponent() {
+  const {cartItems} = useShoppingCart()
   return (
     <>
-      {" "}
       <img src={shopping} alt="" />
       <span>Cart</span>
-      <div className="badge">5</div>
+      <div className="badge">{cartItems.length}</div>
     </>
   );
 }
